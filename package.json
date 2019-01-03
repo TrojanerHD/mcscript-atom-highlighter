@@ -4,11 +4,8 @@
   "description": "A syntax theme, highlighting and auto-completition for mcscript",
   "main": "./lib/main",
   "keywords": [
-    "dark",
-    "blue",
-    "syntax",
-    "language",
-    "grammar"
+    "mcscript",
+    "highlighting"
   ],
   "repository": "https://github.com/TrojanerHD/mcscript-atom-highlighter",
   "license": "MIT",

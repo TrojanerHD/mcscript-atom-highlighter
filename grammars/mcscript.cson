@@ -1,0 +1,90 @@
+# If this is your first time writing a language grammar, check out:
+#   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+
+'scopeName': 'source.mcscript'
+'name': 'MCScript'
+'fileTypes': [
+  'mcscript'
+]
+'patterns': [
+  {
+    'match': '\\b((if|asat|align|anchored|as|at|facing|in|positioned|rotated|store)(?=\\()|(?<=\\} )else(?= \\{| if\\())'
+    'name': 'orange'
+  },
+  {
+    'match': '((?<=\\[)|(?<=,| ))(nbt|gamemode|level|x|y|z|dx|dy|dz|distance|x_rotation|y_rotation|limit|tag|type|sort|scores|name|team|facing)(?==)'
+    'name': 'light-blue'
+  },
+  {
+    'match': '#(file|extend):.*\\n'
+    'name': 'string.quoted.double'
+  },
+  {
+    'begin': '#|//'
+    'end': "(:(?=\\w)|\\n)"
+    'name': 'comment'
+  },
+  {
+    'begin': '\\/|run: '
+    'end': '(\\w$| |\\n|\\r\\n)'
+    'name': 'yellow'
+  },
+  {
+    'begin': 'minecraft:'
+    'end': '(\\n|\\r\\n|(?=\\{|\\[|\\\')| )'
+    'name': 'entity.name.section'
+  },
+  {
+    'match': '\\B@(e|a|s|r|p)'
+    'name': 'string.other'
+  },
+  {
+    'begin': "\\'((?!entity|\\)|block))"
+    'end': "\\'"
+    'name': 'data-type.green'
+  },
+  {
+    'begin': '(?<!\\\\)\\"'
+    'end': '(?<!\\\\)\\"'
+    'name': 'data-type.green'
+  },
+  {
+    'match': '(\\.\\.|)[0-9](\\.\\.|)'
+    'name': 'data-type.blue'
+  },
+  {
+    'match': '(var|bool|true|false|;)'
+    'name': 'orange'
+  },
+  {
+    'begin': '\\$\\('
+    'end': '\\)'
+    'name': 'variable.other'
+  },
+  {
+    'begin': '~|\\^'
+    'end': '( |\\n|\\r\\n|\\w$)'
+    'name': 'keyword.control'
+  },
+  {
+    'match': ','
+    'name': 'orange'
+  },
+  {
+    'match': '(run |)function'
+    'name': 'yellow'
+  },
+  {
+    'match': "\\'"
+    'name': 'data-type.green'
+  },
+  {
+    'match': 'modal'
+    'name': 'orange'
+  },
+  {
+    'begin': '(?<=modal )'
+    'end': '(?=\\()'
+    'name': 'yellow'
+  },
+]

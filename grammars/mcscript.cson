@@ -20,7 +20,7 @@
     'name': 'string.quoted.double'
   },
   {
-    'begin': '#|//'
+    'begin': '((?<!set |enable |add |remove |operation |get |list |reset |= |> |< )#|\\/\\/)'
     'end': "(:(?=\\w)|\\n)"
     'name': 'comment'
   },
@@ -36,6 +36,11 @@
   },
   {
     'match': '\\B@(e|a|s|r|p)'
+    'name': 'string.other'
+  },
+  {
+    'begin': '(?<=set |enable |add |remove |operation |get |list |reset |= |> |< )#'
+    'end': '(\\n|\\r\\n| )'
     'name': 'string.other'
   },
   {

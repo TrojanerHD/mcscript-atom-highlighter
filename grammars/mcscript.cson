@@ -25,7 +25,7 @@
     'name': 'comment'
   },
   {
-    'begin': '\\s+(\\/|run: )'
+    'begin': '(\\s+|^)(\\/(?!\\/)|run: )'
     'end': '(\\w$| |\\n|\\r\\n)'
     'name': 'yellow'
   },

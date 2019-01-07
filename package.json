@@ -1,6 +1,6 @@
 {
   "name": "mcscript",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A syntax theme, highlighting and auto-completition for mcscript",
   "main": "./lib/main",
   "keywords": [

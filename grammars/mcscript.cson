@@ -8,7 +8,19 @@
 ]
 'patterns': [
   {
-    'match': '\\b((if|asat|align|anchored|as|at|facing|in|positioned|rotated|store)(?=\\()|(?<=\\} )else(?= \\{| if\\())'
+    'match': '\\b((if|asat|align|anchored|as|at|facing|in|positioned|rotated|store|do|for|forEach|raycast|switch)(?=\\()|(?<=\\} )else(?= \\{| if\\())'
+    'name': 'orange'
+  },
+  {
+    'match': '\\blog(?=\\()'
+    'name': 'purple-italic'
+  },
+  {
+    'match': 'case (?=(<=|<|==|>|>=))|default'
+    'name': 'orange'
+  },
+  {
+    'match': 'do( |)(?=\\{)|while( |)(?=\\()'
     'name': 'orange'
   },
   {
@@ -17,48 +29,48 @@
   },
   {
     'match': '#(file|extend):.*\\n'
-    'name': 'string.quoted.double'
+    'name': 'light-green'
   },
   {
     'begin': '((?<!set |enable |add |remove |operation |get |list |reset |= |> |< )#|\\/\\/)'
     'end': "(:(?=\\w)|\\n)"
-    'name': 'comment'
+    'name': 'gray'
   },
   {
-    'begin': '(\\s+|^)(\\/(?!\\/)|run: )'
+    'begin': '\\/\\*'
+    'end': "\\*\\/"
+    'name': 'gray'
+  },
+  {
+    'begin': '(^\\s*(\\/(?!\\/|\\*))|run: )'
     'end': '(\\w$| |\\n|\\r\\n)'
     'name': 'yellow'
   },
   {
     'begin': 'minecraft:'
     'end': '(\\n|\\r\\n|(?=\\{|\\[|\\\')| )'
-    'name': 'entity.name.section'
+    'name': 'light-blue'
   },
   {
     'match': '\\B@(e|a|s|r|p)'
-    'name': 'string.other'
-  },
-  {
-    'begin': '(?<=set |enable |add |remove |operation |get |list |reset |= |> |< )#'
-    'end': '(\\n|\\r\\n| )'
-    'name': 'string.other'
+    'name': 'light-green'
   },
   {
     'begin': "\\'((?!entity|\\)|block))"
     'end': "\\'"
-    'name': 'data-type.green'
+    'name': 'data-type.dark-green'
   },
   {
     'begin': '(?<!\\\\)\\"'
     'end': '(?<!\\\\)\\"'
-    'name': 'data-type.green'
+    'name': 'data-type.dark-green'
   },
   {
     'match': '(\\.\\.|)[0-9](\\.\\.|)'
     'name': 'data-type.blue'
   },
   {
-    'match': '(var|bool|true|false|;)'
+    'match': '(var|const|bool|true|false|;)'
     'name': 'orange'
   },
   {
@@ -69,7 +81,7 @@
   {
     'begin': '~|\\^'
     'end': '( |\\n|\\r\\n|\\w$)'
-    'name': 'keyword.control'
+    'name': 'purple'
   },
   {
     'match': ','
@@ -81,7 +93,7 @@
   },
   {
     'match': "\\'"
-    'name': 'data-type.green'
+    'name': 'data-type.dark-green'
   },
   {
     'match': 'modal'

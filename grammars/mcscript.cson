@@ -70,7 +70,11 @@
     'name': 'data-type.blue'
   },
   {
-    'match': '(var|const|bool|true|false|;)'
+    'match': '(true|false|;)'
+    'name': 'orange'
+  },
+  {
+    'match': '^\\s*(var|const|bool)'
     'name': 'orange'
   },
   {
